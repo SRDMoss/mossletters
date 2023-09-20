@@ -1,0 +1,176 @@
+<!-- Main container for user settings panel -->
+<div class="tab-pane fade show active m-5" id="pills-user" role="tabpanel" aria-labelledby="pills-user-tab" tabindex="0">
+  <div class="container gap-3">
+
+    <!-- Explainer Row containing introductory information -->
+    <div class="row m-2">
+      <div class="col">
+        <div class="card-header p-2 text-bg-dark bg-opacity-75 text-white">
+          <h2>User Settings! </h2>
+        </div>
+
+        <div class="card-body p-2 text-bg-dark bg-opacity-75 text-white">
+          <!-- Information and instructions for user settings -->
+          <p>Add or Update your account and preferences here. All fields are required in order to update or get your records. When you are ready, check out the Admin View. </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content Row containing the user settings form -->
+    <form action="/mossletters/user/" method="post">
+      <div class="row row-cols-lg-4 row-cols-sm-2">
+        <!-- Frequency Settings -->
+        <div class="col-lg-3 col-sm-6 py-2">
+          <div class="card rounded-top-5 h-100">
+
+            <div class="card-header bg-success-subtle border border-success rounded-pill">
+              <label for="frequency" class="form-label mb-0">Frequency:</label>
+            </div>
+
+            <div class="card-body">
+              <!-- Frequency options -->
+              <ul class="list-group list-group-flush" id="user-frequency-list">
+                <li class="list-group-item"><input type="radio" name="frequency" value="regular" {{#if radios.regular}}checked="checked"{{/if}}> Regular Updates</li>
+                <li class="list-group-item"><input type="radio" name="frequency" value="releases" {{#if radios.releases}}checked="checked"{{/if}}> Release Dates &amp; Changelogs</li>
+                <li class="list-group-item"><input type="radio" name="frequency" value="photos" {{#if radios.photos}}checked="checked"{{/if}}> Photo Updates Only</li>
+                <li class="list-group-item"><input type="radio" name="frequency" value="major" {{#if radios.major}}checked="checked"{{/if}}> Major Updates Only</li>
+                <li class="list-group-item"><input type="radio" name="frequency" value="all" {{#if radios.all}}checked="checked"{{/if}}> All Updates!</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Projects Settings -->
+        <div class="col-lg-3 col-sm-6 py-2">
+          <div class="card rounded-top-5 h-100">
+            <div class="card-header bg-success-subtle border border-success rounded-pill">
+              <label for="projects" class="form-label mb-0">Projects:</label>
+            </div>
+
+            <div class="card-body">
+              <!-- Project options -->
+              <ul id="u-projects-list" class="list-group list-group-flush">
+
+                <li class="list-group-item">
+                  <input type="checkbox" class="focus-ring focus-ring-warning" name="projects" value="woodworking" {{#if checkboxes.woodworking}}checked{{/if}}>
+                  <label class="form-check-label" for="woodworking">&nbsp;&nbsp;Woodworking</label></li>
+                <li class="list-group-item"><input type="checkbox" class="focus-ring focus-ring-warning" name="projects" value="fictionWriting" {{#if checkboxes.fictionWriting}}checked{{/if}}>
+                  <label class="form-check-label" for="fictionWriting">&nbsp;&nbsp;Fiction Writing</label></li>
+                <li class="list-group-item"><input type="checkbox" class="focus-ring focus-ring-warning" name="projects" value="cityRater" {{#if checkboxes.cityRater}}checked{{/if}}>
+                  <label class="form-check-label" for="cityRater">&nbsp;&nbsp;CityRater</label></li>
+                <li class="list-group-item"><input type="checkbox" class="focus-ring focus-ring-warning" name="projects" value="fictionOutliner" {{#if checkboxes.fictionOutliner}}checked{{/if}}>
+                  <label class="form-check-label" for="fictionOutliner">&nbsp;&nbsp;FictionOutliner</label></li>
+                <li class="list-group-item"><input type="checkbox" class="focus-ring focus-ring-warning" name="projects" value="flashy" {{#if checkboxes.flashy}}checked{{/if}}>
+                  <label class="form-check-label" for="flashy">&nbsp;&nbsp;Flashy</label></li>
+                <li class="list-group-item"><input type="checkbox" class="focus-ring focus-ring-warning" name="projects" value="other" {{#if checkboxes.other}}checked{{/if}}>
+                  <label class="form-check-label" for="other">&nbsp;&nbsp;Everything Else</label></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Name Settings -->
+        <div class="col-lg-3 col-sm-6 py-2">
+          <div class="card rounded-top-5 h-100">
+            <div class="card-header bg-success-subtle border border-success rounded-pill">
+              Name:
+            </div>
+
+            <div class="card-body">
+              <!-- First name and last name fields -->
+              <label for="first-name">First Name:</label>
+              <input type="text" id="first-name" name="firstName" class="form-control focus-ring focus-ring-warning" value="{{user.firstName}}">
+
+              <label for="last-name">Last Name:</label>
+              <input type="text" id="last-name" name="lastName" class="form-control focus-ring focus-ring-warning" value="{{user.lastName}}">
+            </div>
+
+            <div class="card-footer bg-danger-subtle text-danger border border-danger m-2" id="name-messages">    
+              <p class="warning m-0 text-center invisible" id="first-name-empty">- First Name field is required.</p>
+              <p class="warning m-0 text-center invisible" id="last-name-empty">- Last Name field is required.</p>
+              <p class="warning m-0 text-center invisible" id="first-name-formatting">- Only alphabet letters are permitted.</p>
+              <p class="warning m-0 text-center invisible" id="last-name-formatting">- Only alphabet letters are permitted.</p>                                     
+            </div>
+          </div>
+        </div>
+
+        <!-- Email Settings -->
+        <div class="col-lg-3 col-sm-6 py-2">
+          <div class="card rounded-top-5 h-100">
+
+            <div class="card-header bg-success-subtle border border-success rounded-pill">
+              <label for="email" class="form-label mb-0">Email:</label>            
+            </div>
+
+            <div class="card-body">
+              <!-- Email input field -->
+              <input type="text" id="email" name="email" class="form-control focus-ring focus-ring-warning" value="{{user.email}}">
+            </div>
+
+            <div class="card-footer bg-danger-subtle text-danger border border-danger m-2" id="email-messages">
+              <p class="warning m-0 text-center invisible" id="email-empty">- Email field is required.</p>
+              <p class="warning m-0 text-center invisible" id="email-formatting">- An email must contain an "&#64;" and a period "."</p>                                    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Button Row containing user action buttons -->
+      <div class="row">
+        <div class="col">
+          <div class="card bg-success-subtle rounded-bottom-5 border border-success text-center">
+            <div class="button-box">
+              <!-- Update button -->
+              <button type="submit" class="btn btn-success m-4" id="update-button" disabled>
+                Update
+              </button>
+              </form>       
+              <!-- Get user record as XML button -->
+              <form action="/mossletters/user/xml" method="get" target="_blank">   
+                <button type="submit" class="btn btn-success m-4" id="xml-button" disabled>
+                  Get your User Record as XML
+                </button>
+              </form>
+              <!-- Get user record as JSON button -->
+              <form action="/mossletters/user/json" method="get" target="_blank">    
+                <button type="submit" class="btn btn-success m-4" id="json-button" disabled>
+                  Get your User Record as JSON
+                </button>
+              </form>
+              <!-- Delete account button -->
+              <form action="/mossletters/user">    
+                <button type="submit" class="btn btn-success m-4" id="delete-button">
+                  Delete your account! 
+                </button>
+              </form>
+              <!-- Try admin tools button -->
+              <form action="/mossletters/admin" method="get">    
+                <button type="submit" class="btn btn-success m-4" id="admin-button">
+                  Try Our Admin Tools! 
+                </button>
+              </form>
+              <!-- JavaScript to handle account deletion -->
+              <script>
+                document.getElementById('delete-button').addEventListener('click', function(e) {
+                  e.preventDefault(); // Prevent the default form submission
+                  fetch('/mossletters/user/', {
+                    method: 'DELETE',
+                  })
+                  .then(response => {
+                    if (response.status === 404) {
+                      console.error('User not found!');
+                    } else if (response.ok) {
+                      document.getElementById('message').innerText = "User successfully deleted."
+                      setTimeout(() => {
+                        window.location.href = "/mossletters/login";
+                      }, 15000);
+                    } else {
+                      console.error('There was an error!', response);
+                    }
+                  })
+                  .catch(error => console.error('There was an error!', error));
+                });
+              </script>
+            </div>
+          </div> 
+        </div>
+      </div>
+      <script type="module" src="/mossletters/assets/js/UserValidation.js"></script>  

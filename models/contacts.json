@@ -1,0 +1,695 @@
+[
+    {
+        "entryDate": "2023,7,15,19,32",
+        "name": "Ivy Archwood",
+        "email": "ivy.archwood@falsenet.fake",
+        "frequency": "releases",
+        "projects": [
+            "flashy"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,19,34",
+        "name": "Anthony Pearl",
+        "email": "anthony.pearl@synthmail.fake",
+        "frequency": "photos",
+        "projects": [
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,19,35",
+        "name": "Bella Stonebridge",
+        "email": "bella_stonebridge@mockmail.fake",
+        "frequency": "major",
+        "projects": [
+            "flashy",
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,19,36",
+        "name": "Carlos Sunlight",
+        "email": "carlos_sunlight@fauxmail.fake",
+        "frequency": "all",
+        "projects": [
+            "fictionOutliner"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,19,37",
+        "name": "Diana Moonstream",
+        "email": "diana.moonstream@dummyinbox.fake",
+        "frequency": "regular",
+        "projects": [
+            "fictionOutliner",
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,19,37",
+        "name": "Ethan Startshine",
+        "email": "ethan_starshine@makebelieve.fake",
+        "frequency": "releases",
+        "projects": [
+            "fictionOutliner",
+            "flashy"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,19,38",
+        "name": "Fiona Blackwater",
+        "email": "fiona.blackwater@pretendmail.fake",
+        "frequency": "photos",
+        "projects": [
+            "fictionOutliner",
+            "flashy",
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,19,39",
+        "name": "Graham Whiteriver",
+        "email": "graham_whiteriver@nullmail.fake",
+        "frequency": "major",
+        "projects": [
+            "cityRater"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,19,40",
+        "name": "Hannah Sunblaze",
+        "email": "hannah.sunblaze@fabricatedinbox.fake",
+        "frequency": "all",
+        "projects": [
+            "cityRater",
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,19,40",
+        "name": "Isaac Clearlake",
+        "email": "isaac_clearlake@imaginarymail.fake",
+        "frequency": "regular",
+        "projects": [
+            "cityRater",
+            "flashy"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,19,41",
+        "name": "Jessica Moonbeam",
+        "email": "jessica.moonbeam@falsenet.fake",
+        "frequency": "releases",
+        "projects": [
+            "cityRater",
+            "flashy",
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,19,42",
+        "name": "Kevin Frostpeak",
+        "email": "kevin.frostpeak@synthmail.fake",
+        "frequency": "photos",
+        "projects": [
+            "cityRater",
+            "fictionOutliner"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,19,42",
+        "name": "Laura Nightwind",
+        "email": "laura_nightwind@mockmail.fake",
+        "frequency": "photos",
+        "projects": [
+            "cityRater",
+            "fictionOutliner",
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,19,43",
+        "name": "Martin Lightshard",
+        "email": "martin_lightshard@fauxmail.fake",
+        "frequency": "all",
+        "projects": [
+            "cityRater",
+            "fictionOutliner",
+            "flashy"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,19,44",
+        "name": "Nina Stormwhisper",
+        "email": "nina.stormwhisper@dummyinbox.fake",
+        "frequency": "regular",
+        "projects": [
+            "cityRater",
+            "fictionOutliner",
+            "flashy",
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,19,52",
+        "name": "Oscar Goldleaf",
+        "email": "oscar_goldleaf@makebelieve.fake",
+        "frequency": "releases",
+        "projects": [
+            "fictionWriting"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,19,53",
+        "name": "Paula Ironbloom",
+        "email": "paula.ironbloom@pretendmail.fake",
+        "frequency": "photos",
+        "projects": [
+            "fictionWriting",
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,19,54",
+        "name": "Quentin Whiteflower",
+        "email": "Quentin_whiteflower@nullmail.fake",
+        "frequency": "major",
+        "projects": [
+            "fictionWriting",
+            "flashy"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,19,56",
+        "name": "Rebecca Silverwood",
+        "email": "rebecca.silverwood@fabricatedinbox.fake",
+        "frequency": "all",
+        "projects": [
+            "fictionWriting",
+            "flashy",
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,19,56",
+        "name": "Samuel Frostfire",
+        "email": "Samuel_frostfire@imaginarymail.fake",
+        "frequency": "regular",
+        "projects": [
+            "fictionWriting",
+            "fictionOutliner"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,19,57",
+        "name": "Tina Blacksky",
+        "email": "tina.blacksky@falsenet.fake",
+        "frequency": "releases",
+        "projects": [
+            "fictionWriting",
+            "fictionOutliner",
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,19,58",
+        "name": "Ulrich Lightfall",
+        "email": "ulrich_lightfall@synthmail.fake",
+        "frequency": "photos",
+        "projects": [
+            "fictionWriting",
+            "fictionOutliner",
+            "flashy"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,19,58",
+        "name": "Vanessa Goldsoul",
+        "email": "vanessa@mockmail.fake",
+        "frequency": "major",
+        "projects": [
+            "fictionWriting",
+            "fictionOutliner",
+            "flashy",
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,19,59",
+        "name": "William Silverstone",
+        "email": "william@fauxmail.fake",
+        "frequency": "all",
+        "projects": [
+            "fictionWriting",
+            "cityRater"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,3",
+        "name": "Xenia Darkbrook",
+        "email": "xenia@dummyinbox.fake",
+        "frequency": "regular",
+        "projects": [
+            "fictionWriting",
+            "cityRater",
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,3",
+        "name": "Yanis Whitepeak",
+        "email": "whitepeak@makebelieve.fake",
+        "frequency": "releases",
+        "projects": [
+            "fictionWriting",
+            "cityRater",
+            "flashy"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,4",
+        "name": "Zara Blackthorn",
+        "email": "zara.blackthorn@pretendmail.fake",
+        "frequency": "photos",
+        "projects": [
+            "fictionWriting",
+            "cityRater",
+            "flashy",
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,4",
+        "name": "Aaron Lighstar",
+        "email": "aaron@nullmail.fake",
+        "frequency": "major",
+        "projects": [
+            "fictionWriting",
+            "cityRater",
+            "fictionOutliner"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,5",
+        "name": "Beatrice Darkflame",
+        "email": "beatrice@fabricatedinbox.fake",
+        "frequency": "all",
+        "projects": [
+            "fictionWriting",
+            "cityRater",
+            "fictionOutliner",
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,6",
+        "name": "Cassandra Whiteshadow",
+        "email": "cassie@imaginarymail.fake",
+        "frequency": "regular",
+        "projects": [
+            "fictionWriting",
+            "cityRater",
+            "fictionOutliner",
+            "flashy"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,6",
+        "name": "Derek Brightmeadow",
+        "email": "db@falsenet.fake",
+        "frequency": "releases",
+        "projects": [
+            "fictionWriting",
+            "cityRater",
+            "fictionOutliner",
+            "flashy",
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,7",
+        "name": "Eleanor Sunbranch",
+        "email": "sunny@synthmail.fake",
+        "frequency": "photos",
+        "projects": [
+            "woodworking"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,7",
+        "name": "Francis Moonmist",
+        "email": "Francie@synthmail.fake",
+        "frequency": "major",
+        "projects": [
+            "woodworking",
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,8",
+        "name": "Greta Goldfeather",
+        "email": "greta@fauxmail.fake",
+        "frequency": "all",
+        "projects": [
+            "woodworking",
+            "flashy"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,8",
+        "name": "Harold Silvercloud",
+        "email": "harry@dummyinbox.fake",
+        "frequency": "regular",
+        "projects": [
+            "woodworking",
+            "flashy",
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,9",
+        "name": "Irene Clearsky",
+        "email": "Clearsky@makebelieve.fake",
+        "frequency": "releases",
+        "projects": [
+            "woodworking",
+            "fictionOutliner"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,9",
+        "name": "John Darkwater",
+        "email": "dorkwaiter@pretendmail.fake",
+        "frequency": "photos",
+        "projects": [
+            "woodworking",
+            "fictionOutliner",
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,10",
+        "name": "Kendra Stormwind",
+        "email": "kendra.stormwind@nullmail.fake",
+        "frequency": "major",
+        "projects": [
+            "woodworking",
+            "fictionOutliner",
+            "flashy"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,10",
+        "name": "Luke Davis",
+        "email": "brightsky@fabricatedinbox.fake",
+        "frequency": "all",
+        "projects": [
+            "woodworking",
+            "fictionOutliner",
+            "flashy",
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,11",
+        "name": "Mona Froststream",
+        "email": "Mona@imaginarymail.fake",
+        "frequency": "regular",
+        "projects": [
+            "woodworking",
+            "cityRater"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,12",
+        "name": "Nathan Sunshadow",
+        "email": "nathan@falsenet.fake",
+        "frequency": "releases",
+        "projects": [
+            "woodworking",
+            "cityRater",
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,12",
+        "name": "Olivia Whitefrost",
+        "email": "Olive@synthmail.fake",
+        "frequency": "photos",
+        "projects": [
+            "woodworking",
+            "cityRater",
+            "flashy"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,13",
+        "name": "Peter Blackcurrant",
+        "email": "berries@mockmail.fake",
+        "frequency": "major",
+        "projects": [
+            "flashy"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,14",
+        "name": "Quinn Moonblossom",
+        "email": "Quinny@fauxmail.fake",
+        "frequency": "all",
+        "projects": [
+            "woodworking",
+            "cityRater",
+            "fictionOutliner"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,14",
+        "name": "Rachel Starwhisper",
+        "email": "shhh@dummyinbox.fake",
+        "frequency": "regular",
+        "projects": [
+            "woodworking",
+            "cityRater",
+            "fictionOutliner",
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,15",
+        "name": "Seth Stormcloud",
+        "email": "stormcloud@makebelieve.fake",
+        "frequency": "releases",
+        "projects": [
+            "woodworking",
+            "cityRater",
+            "fictionOutliner",
+            "flashy"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,16",
+        "name": "Teresa Clearstream",
+        "email": "TessClearstream@pretendmail.fake",
+        "frequency": "photos",
+        "projects": [
+            "woodworking",
+            "cityRater",
+            "fictionOutliner",
+            "flashy",
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,16",
+        "name": "Umberto White",
+        "email": "umberto.w@null.mail.fake",
+        "frequency": "major",
+        "projects": [
+            "woodworking",
+            "fictionWriting"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,17",
+        "name": "Victoria Goldbrook",
+        "email": "VickyG@fabricatedinbox.fake",
+        "frequency": "all",
+        "projects": [
+            "woodworking",
+            "fictionWriting",
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,17",
+        "name": "Walter Nightstone",
+        "email": "walter.m.nightstone@imaginarymail.fake",
+        "frequency": "regular",
+        "projects": [
+            "woodworking",
+            "fictionWriting",
+            "flashy"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,18",
+        "name": "Xavier Blackpeak",
+        "email": "Xav@falsenet.fake",
+        "frequency": "releases",
+        "projects": [
+            "woodworking",
+            "fictionWriting",
+            "flashy",
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,18",
+        "name": "Yvonne Sunflower",
+        "email": "Yvonne.sunflower@synthmail.fake",
+        "frequency": "photos",
+        "projects": [
+            "woodworking",
+            "fictionWriting",
+            "fictionOutliner"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,19",
+        "name": "Zachariah Silvermist",
+        "email": "Zach_silvermist@mockmail.fake",
+        "frequency": "major",
+        "projects": [
+            "woodworking",
+            "fictionWriting",
+            "fictionOutliner",
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,19",
+        "name": "Andrea Brightlake",
+        "email": "andrea.brightlake@fauxmail.fake",
+        "frequency": "all",
+        "projects": [
+            "woodworking",
+            "fictionWriting",
+            "fictionOutliner",
+            "flashy"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,20",
+        "name": "Bart Darkdawn",
+        "email": "bart@dummyinbox.fake",
+        "frequency": "regular",
+        "projects": [
+            "woodworking",
+            "fictionWriting",
+            "fictionOutliner",
+            "flashy",
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,21",
+        "name": "Christina Whitewave",
+        "email": "whitewave@makebelieve.fake",
+        "frequency": "releases",
+        "projects": [
+            "woodworking",
+            "fictionWriting",
+            "cityRater"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,21",
+        "name": "Donald Clearfrost",
+        "email": "don.clearfrost@pretendmail.fake",
+        "frequency": "photos",
+        "projects": [
+            "woodworking",
+            "fictionWriting",
+            "cityRater",
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,22",
+        "name": "Elise Frostleaf",
+        "email": "elise@nullmail.fake",
+        "frequency": "major",
+        "projects": [
+            "woodworking",
+            "fictionWriting",
+            "cityRater",
+            "flashy"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,22",
+        "name": "Frank Goldmountain",
+        "email": "frank@fabricatedinbox.fake",
+        "frequency": "all",
+        "projects": [
+            "woodworking",
+            "fictionWriting",
+            "cityRater",
+            "flashy",
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,23",
+        "name": "Georgia Moonlight",
+        "email": "georgia@imaginarymail.fake",
+        "frequency": "regular",
+        "projects": [
+            "woodworking",
+            "fictionWriting",
+            "cityRater",
+            "fictionOutliner"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,23",
+        "name": "Howard Silver",
+        "email": "howie@falsenet.fake",
+        "frequency": "releases",
+        "projects": [
+            "woodworking",
+            "fictionWriting",
+            "cityRater",
+            "fictionOutliner",
+            "other"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,23",
+        "name": "Isabella Lightshadow",
+        "email": "izzy@synthmail.fake",
+        "frequency": "photos",
+        "projects": [
+            "woodworking",
+            "fictionWriting",
+            "cityRater",
+            "fictionOutliner",
+            "flashy"
+        ]
+    },
+    {
+        "entryDate": "2023,7,15,20,24",
+        "name": "James Blackstar",
+        "email": "jimmy@mockmail.fake",
+        "frequency": "major",
+        "projects": [
+            "woodworking",
+            "fictionWriting",
+            "cityRater",
+            "fictionOutliner",
+            "flashy",
+            "other"
+        ]
+    }
+]

@@ -1,0 +1,313 @@
+<!-- Main container for admin view panel -->
+<div class="tab-pane fade show active" id="pills-manage" role="tabpanel" aria-labelledby="pills-manage-tab" tabindex="0">
+  <div class="container gap-3">
+    <!-- Explainer Row with introductory information -->
+    <div class="row m-2">
+      <div class="col">
+        <div class="card-header p-2 text-bg-dark bg-opacity-75 text-white">
+          <h2>Admins.</h2>
+        </div>
+
+        <div class="card-body p-2 text-bg-dark bg-opacity-75 text-white">
+          <!-- Explanation of admin functionalities -->
+          <p>If you'd like, you can select the parameters for a specific type of Mossletter and recieve a list of all subscribers. 
+            Alternatively, if you'd like to edit a specific user, you can pull them up by their email address. 
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form for filter options or edit user -->
+    {{#if toolChoice}}
+    <div class="row">
+      <div class="col">
+        <div class="card rounded-pill text-center bg-success-subtle border border-success">
+          <div class="button-box">
+            <!-- Filter users by specific parameters -->
+          <form id="filter-form" action="/mossletters/admin/filterUsers">
+            <button type="submit" class="btn btn-success m-4" id="admin-submit-button">
+              Get filtered list of subscribers
+            </button>
+          </form>
+          <!-- Edit a specific subscriber by email -->
+          <form id="edit-form" action="/mossletters/admin/user">    
+            <button type="submit" class="btn btn-success m-4" id="xmlButton">
+              Edit Specific subscriber
+            </button>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{/if}}
+
+    <!-- Form for selecting filter options -->
+    <form id="filter-choice-form" enctype="multipart/form-data">
+    {{#if filterOptions}}
+    <div class="row row-cols-sm-2">
+      <!-- Frequency filter -->
+      <div class="col-sm-6 py-2">
+        <div class="card rounded-top-5 h-100">          
+          <div class="card-header bg-success-subtle border border-success rounded-pill">
+            <label for="frequency" class="form-label mb-0">Frequency:</label>
+          </div>
+
+          <div class="card-body">
+            <!-- Frequency filter options -->
+            <ul class="list-group list-group-flush" id="admin-frequency-list">
+              <li class="list-group-item"><input type="radio" name="admin-frequency" value="regular" checked> Regular Updates</li>
+              <li class="list-group-item"><input type="radio" name="admin-frequency" value="releases"> Release Dates &amp; Changelogs</li>
+              <li class="list-group-item"><input type="radio" name="admin-frequency" value="photos"> Photo Updates Only</li>
+              <li class="list-group-item"><input type="radio" name="admin-frequency" value="major"> Major Updates Only</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Projects filter -->
+      <div class="col-sm-6 py-2">
+        <div class="card rounded-top-5 h-100">
+          <div class="card-header bg-success-subtle border border-success rounded-pill">
+            <label for="projects" class="form-label mb-0">Projects:</label>
+          </div>
+
+          <div class="card-body">
+            <!-- Project filter options -->
+            <ul class="manage-projects-list list-group list-group-flush">
+              <li class="list-group-item"><input type="radio" id="admin-woodworking" name="admin-projects" value="woodworking" checked> Woodworking</li>
+              <li class="list-group-item"><input type="radio" id="admin-fictionWriting" name="admin-projects" value="fictionWriting"> Fiction Writing</li>
+              <li class="list-group-item"><input type="radio" id="admin-cityRater" name="admin-projects" value="cityRater"> CityRater</li>
+              <li class="list-group-item"><input type="radio" id="admin-fictionOutliner" name="admin-projects" value="fictionOutliner"> FictionOutliner</li>
+              <li class="list-group-item"><input type="radio" id="admin-flashy" name="admin-projects" value="flashy"> Flashy</li>
+              <li class="list-group-item"><input type="radio" id="admin-other" name="admin-projects" value="other"> Other web apps</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{/if}}
+
+    <!-- Display results table -->
+    {{#if showTable}}
+    <div class="row">
+      <div class="col">        
+        <div class="text-center m-2" id="results-table">
+          <!-- Table displaying filtered user list -->
+          <table class="table table-striped table-hover table-bordered border-success">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Frequency</th>
+                <th>Projects</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each userList}}
+              <tr>
+                <td>{{this.firstName}} {{this.lastName}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.frequency}}</td>
+                <td>
+                  {{#each this.projects}}
+                    {{this}}{{#unless @last}},{{/unless}}
+                  {{/each}}
+                </td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    {{/if}}
+
+    <!-- Filter action buttons -->    
+    {{#if filterButtons}}
+    <div class="row">
+      <div class="col">
+        <div class="card rounded-bottom-5 text-center bg-success-subtle border border-success">
+          <div class="button-box">
+
+            <!-- If filterOptions is not showing, maintain the parameters on submit-->
+            {{#unless filterOptions}}
+            <input type="hidden" name="admin-projects" value="{{projectFilter}}">
+            <input type="hidden" name="admin-frequency" value="{{frequencyFilter}}">
+            {{/unless}}   
+
+            <!-- Show filtered user list -->         
+            <button class="btn btn-success m-4" type="button" onclick="submitForm(this, '/mossletters/admin/filterUsers/show')">
+              See list here
+            </button>
+  
+            <!-- Get filtered list as XML -->
+            <button class="btn btn-success m-4" type="button" onclick="submitForm(this, '/mossletters/admin/filterUsers/xml', '_blank')">
+              Get List as XML
+            </button>    
+
+            <!-- Get filtered list as JSON -->
+            <button class="btn btn-success m-4" type="button" onclick="submitForm(this, '/mossletters/admin/filterUsers/json', '_blank')">
+              Get List as JSON
+            </button>
+
+            <!-- Start a new search -->
+            <button class="btn btn-success m-4" type="button" onclick="submitForm(this, '/mossletters/admin/filterUsers/')">
+              New Search
+            </button>            
+          </div>
+        </div>
+      </div>
+    </div>
+    {{/if}}
+    </form>
+
+    <!-- Form to enter specific user for editing -->
+    {{#if enterUser}}
+    <div class="row">
+      <div class="col">
+        <div class="card rounded-pill text-center bg-success-subtle border border-success">
+          <div class="button-box">
+            <form id="submit-form" method="post" action="/mossletters/admin/user/show">
+              <!-- Input for user email -->
+              <div class="label-input-group">
+                <label for="edit-email" class="m-2">User Email:</label>
+                <input type="text" id="edit-email" name="edit-email" class="form-control focus-ring focus-ring-warning">
+              </div>
+              <!-- Button to submit for user editing -->
+              <button type="submit" class="btn btn-success m-4" id="edit-email-submit-button">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{/if}}  
+
+    <!-- Form to display and edit user details -->
+    {{#if displayUser}}
+    <form action="/mossletters/admin/user/" method="post">
+      <div class="row row-cols-lg-4 row-cols-sm-2">
+        <!-- Frequency settings -->
+        <div class="col-lg-3 col-sm-6 py-2">
+          <div class="card rounded-top-5 h-100">
+            <div class="card-header bg-success-subtle border border-success rounded-pill">
+              <label for="frequency" class="form-label mb-0">Frequency:</label>
+            </div>
+
+            <div class="card-body">
+              <!-- Frequency options -->
+              <ul class="list-group list-group-flush" id="user-frequency-list">
+                <li class="list-group-item"><input type="radio" name="frequency" value="regular" {{#if radios.regular}}checked="checked"{{/if}}> Regular Updates</li>
+                <li class="list-group-item"><input type="radio" name="frequency" value="releases" {{#if radios.releases}}checked="checked"{{/if}}> Release Dates &amp; Changelogs</li>
+                <li class="list-group-item"><input type="radio" name="frequency" value="photos" {{#if radios.photos}}checked="checked"{{/if}}> Photo Updates Only</li>
+                <li class="list-group-item"><input type="radio" name="frequency" value="major" {{#if radios.major}}checked="checked"{{/if}}> Major Updates Only</li>
+                <li class="list-group-item"><input type="radio" name="frequency" value="all" {{#if radios.all}}checked="checked"{{/if}}> All Updates!</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projects settings -->
+        <div class="col-lg-3 col-sm-6 py-2">
+          <div class="card rounded-top-5 h-100">
+            <div class="card-header bg-success-subtle border border-success rounded-pill">
+              <label for="projects" class="form-label mb-0">Projects:</label>
+            </div>
+
+            <div class="card-body">
+              <!-- Project options -->
+              <ul id="u-projects-list" class="list-group list-group-flush">
+                <li class="list-group-item"><input type="checkbox" class="focus-ring focus-ring-warning" name="projects[]" value="woodworking" {{#if checkboxes.woodworking}}checked{{/if}}>
+                  <label class="form-check-label" for="woodworking">&nbsp;&nbsp;Woodworking</label></li>
+                <li class="list-group-item"><input type="checkbox" class="focus-ring focus-ring-warning" name="projects[]" value="fictionWriting" {{#if checkboxes.fictionWriting}}checked{{/if}}>
+                  <label class="form-check-label" for="fictionWriting">&nbsp;&nbsp;Fiction Writing</label></li>
+                <li class="list-group-item"><input type="checkbox" class="focus-ring focus-ring-warning" name="projects[]" value="cityRater" {{#if checkboxes.cityRater}}checked{{/if}}>
+                  <label class="form-check-label" for="cityRater">&nbsp;&nbsp;CityRater</label></li>
+                <li class="list-group-item"><input type="checkbox" class="focus-ring focus-ring-warning" name="projects[]" value="fictionOutliner" {{#if checkboxes.fictionOutliner}}checked{{/if}}>
+                  <label class="form-check-label" for="fictionOutliner">&nbsp;&nbsp;FictionOutliner</label></li>
+                <li class="list-group-item"><input type="checkbox" class="focus-ring focus-ring-warning" name="projects[]" value="flashy" {{#if checkboxes.flashy}}checked{{/if}}>
+                  <label class="form-check-label" for="flashy">&nbsp;&nbsp;Flashy</label></li>
+                <li class="list-group-item"><input type="checkbox" class="focus-ring focus-ring-warning" name="projects[]" value="other" {{#if checkboxes.other}}checked{{/if}}>
+                  <label class="form-check-label" for="other">&nbsp;&nbsp;Everything Else</label></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Name settings -->
+        <div class="col-lg-3 col-sm-6 py-2">
+          <div class="card rounded-top-5 h-100">
+            <div class="card-header bg-success-subtle border border-success rounded-pill">
+              Name:
+            </div>
+
+            <div class="card-body">
+              <!-- First name and last name fields -->
+              <label for="first-name">First Name:</label>
+              <input type="text" id="first-name" name="firstName" class="form-control focus-ring focus-ring-warning" value="{{user.firstName}}">
+
+              <label for="last-name">Last Name:</label>
+              <input type="text" id="last-name" name="lastName" class="form-control focus-ring focus-ring-warning" value="{{user.lastName}}">
+            </div>
+          </div>
+        </div>
+
+        <!-- Email settings -->
+        <div class="col-lg-3 col-sm-6 py-2">
+          <div class="card rounded-top-5 h-100">
+
+            <div class="card-header bg-success-subtle border border-success rounded-pill">
+              <label for="email" class="form-label mb-0">Email:</label>            
+            </div>
+
+            <div class="card-body">
+              <!-- Email address field -->
+              <input type="text" id="email" name="email" class="form-control focus-ring focus-ring-warning" value="{{user.email}}">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    {{/if}}
+
+    {{#if editButtons}}
+    
+      <!-- Submit changes button -->
+      <div class="row">
+        <div class="col">
+          <div class="card bg-success-subtle rounded-bottom-5 border border-success text-center">
+            <div class="button-box">
+              <button type="submit" class="btn btn-success m-4">
+                Update User
+              </button>
+              </form>       
+
+              <form action="/mossletters/user">    
+                <button type="submit" class="btn btn-success m-4" id="deleteButton">
+                  Delete user 
+                </button>
+              </form>
+              <script>
+                document.getElementById('deleteButton').addEventListener('click', function(e) {
+                  e.preventDefault(); // Prevent the default form submission
+                  fetch('/mossletters/user/', {
+                    method: 'DELETE',
+                  })
+                  .then(response => {
+                    if (response.ok) {
+                      window.location.href = '/mossletters/login'; // Redirect to the login page
+                    } else {
+                      console.error('There was an error!', response);
+                    }
+                  })
+                  .catch(error => console.error('There was an error!', error));
+                });
+              </script>
+            </div>
+          </div> 
+        </div>
+      </div>
+      {{/if}}
+  </div>
+</div>
+<script src="/mossletters/assets/js/adminScript.js"></script>

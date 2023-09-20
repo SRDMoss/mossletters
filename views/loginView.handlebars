@@ -1,0 +1,115 @@
+<!-- Main container for the login and registration panel -->
+
+<div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="pills-login-tab" tabindex="0">
+  <div class="container gap-3">  
+
+    <!-- Explainer row containing introductory information -->                                                        
+    <div class="row">
+      <div class="col text-bg-dark bg-opacity-75"> 
+        <div class="card-header text-white">  
+          <h2>Mossletters!</h2>
+        </div>  
+
+        <div class="card-body text-white">
+          <!-- Welcoming note and instructions for logging in or registering -->
+          <p>Welcome to my demo site. Login or Register below!</p>
+          <p>Once you are registered you can subscribe to a selection of fake newsletters, dubbed <q>Mossletters.</q> These Mossletters come
+            in a variety of topics and you can choose which topics and what type of updates you'd like&mdash;regular, release dates, photo updates, major 
+            updates or all of them.
+          <p class="text-warning">This is your warning! Use a fake name and credentials that you will recognize! If you want to verify the persistence 
+            of your data, you will want something non-generic. Every Sunday at midnight Eastern US time (currently GMT-5) the database is seeded with fake emails entered by a robot. Not by real
+            people. Data will not persist more than a week, nonetheless, please keep your real data safe and make stuff up for this. </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row containing the login and registration forms -->
+    <div class="row row-cols-sm-2">
+      <!-- Login section -->
+      <div class="col-sm-6 py-2">
+        <div class="card rounded-top-5 h-100">
+          <div class="card-header bg-success-subtle border border-success rounded-pill">
+            <label for="frequency" class="form-label mb-0">Login:</label>
+          </div>
+
+          <div class="card-body">
+            <!-- Login form -->
+            <form action="/mossletters/login/authenticate" method="post">
+              <label for="current-email">Email:</label>          
+              <input type="text" id="current-email" name="current-email" autocomplete="email" class="form-control focus-ring focus-ring-warning">
+              
+
+              <label for="current-password">Password:</label>
+              <input type="password" id="current-password" name="current-password" autocomplete="current-password" class="form-control focus-ring focus-ring-warning">
+
+              <button type="submit" class="btn btn-success m-4" id="admin-login-button">
+                Login
+              </button>        
+            </form> 
+            <p>If you do not have a login, register for Mossletters right here! <i class="fa-solid fa-arrow-right-long"></i> </p>                         
+          </div>   
+        </div>
+      </div>      
+      <!-- Registration section -->    
+      <div class="col-sm-6 py-2">
+        <div class="card rounded-top-5 h-100">
+          <div class="card-header bg-success-subtle border border-success rounded-pill">
+            <label for="projects" class="form-label mb-0">Register:</label>
+          </div>
+
+          <div class="card-body">
+            <!-- Registration form -->
+            <form action="/mossletters/login/register" method="post">
+
+              <label for="first-name">First Name:</label>          
+              <input type="text" id="first-name" name="first-name" autocomplete="given-name" class="form-control focus-ring focus-ring-warning">              
+              
+              <div class="validation-block bg-danger-subtle text-danger border border-danger m-2 invisible" id="first-name-warnings">    
+                <p class="warning m-0 text-center invisible" id="first-name-empty">- First Name is required</p>
+                <p class="warning m-0 text-center invisible" id="first-name-formatting">- Only alphabet letters are permitted</p>
+              </div>
+
+              <label for="last-name">Last Name:</label>
+              <input type="text" id="last-name" name="last-name" autocomplete="family-name" class="form-control focus-ring focus-ring-warning">
+              <div class="validation-block bg-danger-subtle text-danger border border-danger m-2 invisible" id="last-name-warnings">    
+                <p class="warning m-0 text-center invisible" id="last-name-empty">- First Name is required</p>
+                <p class="warning m-0 text-center invisible" id="last-name-formatting">- Only alphabet letters are permitted</p>
+              </div>
+
+              <label for="email">Email:</label>          
+              <input type="text" id="email" name="email" autocomplete="email" class="form-control focus-ring focus-ring-warning">
+
+              <div class="validation-block bg-danger-subtle text-danger border border-danger m-2 invisible" id="email-warnings">    
+                <p class="warning m-0 text-center invisible" id="email-empty">- Email field is required</p>
+                <p class="warning m-0 text-center invisible" id="email-formatting">- Email must contain an "@" and a period "."</p>
+              </div>
+
+              <label for="new-password">Password:</label>          
+              <input type="password" id="new-password" name="new-password" autocomplete="new-password" class="form-control focus-ring focus-ring-warning">              
+
+              <div class="validation-block bg-danger-subtle text-danger border border-danger m-2 invisible" id="new-password-warnings"> 
+                <p class="warning m-0 text-center invisible" id="password-empty">- Password field is required</p>
+                <p class="warning m-0 text-center invisible" id="password-short">- Password must be at least 8 characters</p>
+                <p class="warning m-0 text-center invisible" id="password-case-formatting">-Password must contain at least one upper case letter and one lower case letter</p>          
+                <p class="warning m-0 text-center invisible" id="password-numeral-formatting">-Password must contain at least one numeral</p> 
+                <p class="warning m-0 text-center invisible" id="password-symbol-formatting">-Password must contain at least one symbol &lpar;except for "&#35;" or "."</p> 
+              </div>
+
+              <label for="password-confirm">Password again:</label>
+              <input type="password" id="password-confirm" name="password-confirm" autocomplete="off" class="form-control focus-ring focus-ring-warning">
+
+              <div class="validation-block bg-danger-subtle text-danger border border-danger m-2 invisible" id="password-confirm-warnings">    
+                <p class="warning m-0 text-center invisible" id="password-confirm-empty">- Password Confirmation field is required</p>  
+                <p class="warning m-0 text-center invisible" id="password-matches">-Passwords must match</p> 
+              </div>
+              <button type="submit" class="btn btn-success m-4" id="admin-register-button" disabled>
+                Register
+              </button>        
+            </form>                  
+          </div>                                            
+        </div> 
+      </div>    
+    </div>
+  </div> 
+</div>
+<script type="module" src="/mossletters/assets/js/LoginValidation.js"></script>        
