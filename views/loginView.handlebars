@@ -6,19 +6,52 @@
     <!-- Explainer row containing introductory information -->                                                        
     <div class="row">
       <div class="col text-bg-dark bg-opacity-75"> 
-        <div class="card-header text-white">  
-          <h2>Mossletters!</h2>
-        </div>  
+        
+        <h3>Mossletters: A Demo</h3>
+        <p class="m-1">Welcome to the Mossletters Demo! If you know what you're doing, login with the forms on the left and full speed ahead. If 
+        this is your first time, the following sections provide more information about the Demo.</p>
+        
 
-        <div class="card-body text-white">
-          <!-- Welcoming note and instructions for logging in or registering -->
-          <p>Welcome to my demo site. Login or Register below!</p>
-          <p>Once you are registered you can subscribe to a selection of fake newsletters, dubbed <q>Mossletters.</q> These Mossletters come
-            in a variety of topics and you can choose which topics and what type of updates you'd like&mdash;regular, release dates, photo updates, major 
-            updates or all of them.
-          <p class="text-warning">This is your warning! Use a fake name and credentials that you will recognize! If you want to verify the persistence 
-            of your data, you will want something non-generic. Every Sunday at midnight Eastern US time (currently GMT-5) the database is seeded with fake emails entered by a robot. Not by real
-            people. Data will not persist more than a week, nonetheless, please keep your real data safe and make stuff up for this. </p>
+        <button class="btn btn-success w-100" type="button" data-bs-toggle="collapse" data-bs-target="#mosslettersIntro" aria-expanded="false" aria-controls="collapseExample">
+          Using the Mossletters Demo
+        </button>
+        <div class="collapse" id="mosslettersIntro">
+          <div class="card card-body text-bg-dark bg-opacity-75">
+            <dl>
+              <dt>Login View:</dt>
+              <dd>To create an account please fill out the right panel, and observe the notice in the next section. You will be able 
+                to use this on your next visit to login. If you are not logged in and attempt to access the other pages, you will be 
+                brought back to this Login View. 
+              </dd>
+
+              <dt>User View:</dt>
+              <dd>Once logged into your account, You can view your information in html, xml, or json and update your preferences as a 
+              customer might in the User View. Your updates will be saved and you can view them by returning to this page, or on the 
+              Admin View. If you wish, you may delete your account and this will remove it fully from the databses. </dd>
+
+              <dt>Admin View:</dt>
+              <dd>In the Admin View, you can act as an employee/administrator and pull a list of database entries which meet criteria 
+              that you select. These results are visible in html, xml, or json formats. You can also lookup a user by their email 
+              address and edit their account information. You can also delete a user from here, but please use one of the sample entries
+              &lpar;they will be in the first 10 entries of any list pull&rpar; so that other users verifying persistence don't get the
+              wrong impression</dd>
+            </dl>
+          </div>
+        </div>
+
+        <button class="btn btn-warning w-100" type="button" data-bs-toggle="collapse" data-bs-target="#securityNotice" aria-expanded="false" aria-controls="collapseExample">
+          Important notice about security 
+        </button>
+        <div class="collapse show" id="securityNotice">
+          <div class="card card-body text-bg-dark bg-opacity-75 text-warning">
+            <p>Please use a fake name and credentials that you will recognize.</p>
+            <p>Your data will be going into a real database and others will be able to see it on the admin page. If you want to verify the 
+              persistence of your data, select something non-generic that you can remember. It is recommended to use the fictional top-level 
+              domain <q>.fake</q> which, as you might have guessed, isn't real.</p>
+            <p>Every Sunday at midnight Eastern US time &lpar;currently GMT-4&rpar; the database is cleared and then seeded with fake emails 
+              entered by a robot. Not by real people. Data will not persist more than a week, nonetheless, please keep your real data safe 
+              and make up something memorable for this. Close this notice by clicking it's title.</p>
+          </div>
         </div>
       </div>
     </div>
