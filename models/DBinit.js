@@ -14,7 +14,7 @@ async function main() {
   await User.deleteMany({});
 
 	// Get the seed data from the JSON file
-  const contactsData = await fs.readFile('./contacts.json');
+  const contactsData = await fs.readFile('/var/www/html/mossletters/models/contacts.json');
   const contacts = JSON.parse(contactsData);
 
 	// Apply the same process to each entry in contacts
