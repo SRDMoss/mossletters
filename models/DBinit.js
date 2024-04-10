@@ -1,5 +1,5 @@
 // This script is run to clear out and seed the databases with data for demo purposes.
-// It's useful now, but when in production, I will have it run weekly to clear out 
+// It's useful now, but when in production, I run it weekly to clear out 
 // any data from users who may have entered real information or offensive information. 
 
 const fs = require('fs').promises;
